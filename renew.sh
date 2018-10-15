@@ -1,0 +1,1 @@
+docker run -it --rm -v <path-to-letsencrypt>:/etc/letsencrypt certbot/certbot renew
