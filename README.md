@@ -4,7 +4,7 @@ LetsEncrypt SSL cert renewal using dedicated HTTP server and autorenewal script
 # Quick Guide
 1. Run dedicated HTTP server
 ```
-docker run --name letsencrypt-dedicated-http -v <path-to-challenge-folder>:/opt/letsencrypt/challenge -d mlenic/letsencrypt-dedicated-http
+docker run --name letsencrypt-dedicated-http -v <path-to-challenge-folder>:/opt/challenge -p 80:80 -d mlenic/letsencrypt-dedicated-http
 ```
 
 2. Fetch SSL certificates
