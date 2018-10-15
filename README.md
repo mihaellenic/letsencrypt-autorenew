@@ -20,7 +20,7 @@ docker run -it --rm -v <path-to-letsencrypt>:/etc/letsencrypt certbot/certbot re
 
 4. Setup automatic SSL certificates renewal (once a week)
 ```
-# crontab -e
+$ crontab -e
 * 10 * * 2 <path-to-renew.sh>
 ```
 
