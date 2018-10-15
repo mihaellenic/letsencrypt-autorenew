@@ -12,8 +12,7 @@ docker run --name letsencrypt-dedicated-http -v <path-to-challenge-folder>:/opt/
 docker run -it --rm -v <path-to-letsencrypt-folder>:/etc/letsencrypt -v <path-to-challenge-folder>:/opt/challenge certbot/certbot certonly --webroot -w /opt/challenge -d <domain-name> --email <your-email> --agree-tos 
 ```
 
-3. Update renew script
-Replace `<path-to-letsencrypt>` with the path used in step #2:
+3. Replace `<path-to-letsencrypt>` in `renew.sh` with LetsEncrypt path used in step #2
 ```
 docker run -it --rm -v <path-to-letsencrypt>:/etc/letsencrypt certbot/certbot renew
 ```
