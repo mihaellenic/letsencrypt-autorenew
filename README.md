@@ -30,6 +30,7 @@ $ crontab -e
 ```
 docker run -it --rm -v <path-to-letsencrypt-folder>:/etc/letsencrypt -v <path-to-challenge-folder>:/opt/challenge certbot/certbot certonly --webroot -w /opt/challenge -d <domain-name> -d <second-domain-name> -d <third-domain-name> --email <your-email> --agree-tos 
 ```
+- you can create your docker image with custom nginx configuration. Just update `nginx.conf` and build docker image from `Dockerfile`
 
 ## Official CertBot documentation
 https://certbot.eff.org/docs/
